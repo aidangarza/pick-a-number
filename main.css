@@ -1,0 +1,58 @@
+.hint {
+  display: none;
+}
+
+.hint.show {
+  display: block;
+}
+
+#tooHigh {
+  color: blue;
+}
+
+#tooLow {
+  color: brown;
+}
+
+#win {
+  color: green;
+}
+
+input:disabled + button {
+  display: none;
+}
+
+input:not(:disabled) + button + button {
+  display: none;
+}
+
+body {
+  background-image: url("images/background.jpeg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body.win::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://i.gifer.com/W9k1.gif");
+  background-size: cover;
+  pointer-events: none;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 60px;
+  border-radius: 60px;
+}
+
+h1 {
+  margin-top: 0;
+}
